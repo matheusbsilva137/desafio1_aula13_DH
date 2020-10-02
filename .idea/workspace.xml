@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfb97ec-b4df-447a-965d-7a6e3ad855bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagramaClasses_vD.drawio" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Curso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Curso.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Professor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Professor.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -29,8 +29,18 @@ class Curso (val codCurso: Int,
 
     fun adicionarAlunos(vararg alunos: Aluno){
         alunos.forEach {
-            if (!alunosMatriculados.containsKey(it.codAluno) && quantMaxAlunos >= alunosMatriculados.size + 1)
-                alunosMatriculados[it.codAluno] = it
+            adicionarUmAluno(it)
         }
+    }
+
+    fun adicionarUmAluno(umAluno: Aluno){
+        if (!alunosMatriculados.containsKey(umAluno.codAluno) && quantMaxAlunos >= alunosMatriculados.size + 1)
+            alunosMatriculados[umAluno.codAluno] = umAluno
+    }
+
+    fun excluirAluno(umAluno: Aluno){
+        if (!alunosMatriculados.containsKey(umAluno.codAluno))
+            alunosMatriculados.remove(umAluno)
+
     }
 }

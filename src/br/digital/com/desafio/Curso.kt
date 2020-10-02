@@ -27,7 +27,7 @@ class Curso (val codCurso: Int,
         profAdj = novoProfAdj
     }
 
-    fun adicionarMatricula(vararg alunos: Aluno){
+    fun adicionarAlunos(vararg alunos: Aluno){
         alunos.forEach {
             if (!alunosMatriculados.containsKey(it.codAluno) && quantMaxAlunos >= alunosMatriculados.size + 1)
                 alunosMatriculados[it.codAluno] = it

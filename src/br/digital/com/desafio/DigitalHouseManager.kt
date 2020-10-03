@@ -65,4 +65,26 @@ class DigitalHouseManager {
             curso.trocarProfessorAdj(profAdj)
         }else throw IllegalArgumentException("Algum dos professores não é da categoria indicada!")
     }
+
+    fun exibirHistoricoProf(codCurso: Int){
+        listaCursos[codCurso] ?: throw IllegalArgumentException("O Curso informado não existe!");
+
+        println(" ------> Professor Titular atual: [${listaCursos[codCurso]!!.profTit.codProfessor}] - ${listaCursos[codCurso]!!.profTit.nome} ${listaCursos[codCurso]!!.profTit.sobrenome}")
+        if (listaCursos[codCurso]!!.profTitAnteriores.size > 0){
+            println(" ---> Professores Titulares anteriores: ")
+            listaCursos[codCurso]!!.profTitAnteriores.forEach {
+                if (listaProfessores[it] != null)
+                    println("    * [${listaProfessores[it]!!.codProfessor}] - ${listaProfessores[it]!!.nome} ${listaProfessores[it]!!.sobrenome}")
+            }
+        }
+
+        println(" ------> Professor Adjunto atual: [${listaCursos[codCurso]!!.profAdj.codProfessor}] - ${listaCursos[codCurso]!!.profAdj.nome} ${listaCursos[codCurso]!!.profAdj.sobrenome}")
+        if (listaCursos[codCurso]!!.profAdjAnteriores.size > 0){
+            println(" ---> Professores Adjuntos anteriores: ")
+            listaCursos[codCurso]!!.profAdjAnteriores.forEach {
+                if (listaProfessores[it] != null)
+                    println("    * [${listaProfessores[it]!!.codProfessor}] - ${listaProfessores[it]!!.nome} ${listaProfessores[it]!!.sobrenome}")
+            }
+        }
+    }
 }

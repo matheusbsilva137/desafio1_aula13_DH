@@ -6,9 +6,9 @@ class Curso (var nome: String,
     val codCurso: Int
     lateinit var profTit: ProfessorTitular
     lateinit var profAdj: ProfessorAdjunto
-    private val alunosMatriculados = mutableMapOf<Int, Aluno>()
-    private val profTitAnteriores = mutableSetOf<Int>()
-    private val profAdjAnteriores = mutableSetOf<Int>()
+    val alunosMatriculados = mutableMapOf<Int, Aluno>()
+    val profTitAnteriores = mutableSetOf<Int>()
+    val profAdjAnteriores = mutableSetOf<Int>()
 
     companion object{
         var codigo = 1
@@ -24,14 +24,18 @@ class Curso (var nome: String,
     }
 
     fun trocarProfessorTit(novoProfTit: ProfessorTitular){
-        if (profAdj.codProfessor != novoProfTit.codProfessor)
-            profTitAnteriores.add(profTit.codProfessor)
+        if (this::profTit.isInitialized) {
+            if (profAdj.codProfessor != novoProfTit.codProfessor)
+                profTitAnteriores.add(profTit.codProfessor)
+        }
         profTit = novoProfTit
     }
 
     fun trocarProfessorAdj(novoProfAdj: ProfessorAdjunto){
-        if (profAdj.codProfessor != novoProfAdj.codProfessor)
-            profAdjAnteriores.add(profAdj.codProfessor)
+        if (this::profAdj.isInitialized) {
+            if (profAdj.codProfessor != novoProfAdj.codProfessor)
+                profAdjAnteriores.add(profAdj.codProfessor)
+        }
         profAdj = novoProfAdj
     }
 
@@ -43,8 +47,14 @@ class Curso (var nome: String,
     }
 
     fun excluirAluno(umAluno: Aluno){
-        if (!alunosMatriculados.containsKey(umAluno.codAluno))
-            alunosMatriculados.remove(umAluno)
+        if (alunosMatriculados.containsKey(umAluno.codAluno))
+            alunosMatriculados.remove(umAluno.codAluno)
         else throw IllegalArgumentException("Aluno não cadastrado no sistema!")
+    }
+
+    fun exibirListaAlunos(){
+        alunosMatriculados.forEach {
+            println(" [${it.value.codAluno}] - ${it.value.nome} ${it.value.sobrenome}")
+        }
     }
 }

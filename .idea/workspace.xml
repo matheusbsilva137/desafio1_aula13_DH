@@ -20,15 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfb97ec-b4df-447a-965d-7a6e3ad855bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/diagramaClasses_vJ.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Principal.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagramaClasses_vH.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagramaClasses_vJ.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/diagramaClasses_vJ.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Curso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Curso.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/DigitalHouseManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/DigitalHouseManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Matricula.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Matricula.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/ProfessorAdjunto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/ProfessorAdjunto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Principal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Principal.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,5 +94,43 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601693825424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601693825424" />
+    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601693824534">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601693824534" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601735601348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601735601348" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601735601348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601735601348" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601735601348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601735601348" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601735601348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601735601348" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1601693690008">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601693690008" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1601735585811">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601735585811" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601695374381">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601695374381" />
   </component>
 </project>

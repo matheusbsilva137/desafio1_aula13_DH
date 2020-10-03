@@ -19,6 +19,9 @@ fun main(){
             println(" [5] - Excluir Curso(s);")
             println(" [6] - Matricular Aluno(s);")
             println(" [7] - Alocar Professor(es);")
+            println(" [8] - Mostrar Histórico de Professores de um curso.")
+            println(" [9] - Remover Aluno de Curso;")
+            println(" [10] - Mostrar Lista de Alunos de Curso;")
             print(" >>> ")
             do ent = readLine() while (ent == null)
             op = if (ent.isNotEmpty()) ent.toInt() else -1
@@ -92,6 +95,7 @@ fun main(){
                             do especialidade = readLine() while (especialidade == null)
                             println(" - Professor Titular registrado com o código ${dhm.registrarProfessorTitular(nome, sobrenome, codProf, especialidade)}.")
                         }else{
+                            print(" - Quantidade de Horas: ")
                             do ent = readLine() while (ent == null)
                             quantHoras = ent.toInt()
                             println(" - Professor Adjunto registrado com o código ${dhm.registrarProfessorAdjunto(nome, sobrenome, codProf, quantHoras)}.")
@@ -157,7 +161,7 @@ fun main(){
                         var prof = dhm.listaProfessores[cod] ?: throw IllegalArgumentException("Não há professores cadastrados com o código dado!")
                         var nome = prof.nome
 
-                        dhm.excluirCurso(cod)
+                        dhm.excluirProfessor(cod)
                         println(" - Professor [$cod] - '$nome' excluído com sucesso.")
                         espaco(2)
 
@@ -169,7 +173,7 @@ fun main(){
                     }
 
                     espaco(1)
-                    println(" -> $quantExclusoes exclusões de cursos realizadas!")
+                    println(" -> $quantExclusoes exclusões de professores realizadas!")
                     pressEnter()
                 }
                 5 -> {
@@ -222,7 +226,7 @@ fun main(){
                         do ent = readLine() while (ent == null)
                         codAluno = ent.toInt()
 
-                        var aluno = dhm.listaCursos[codAluno] ?: throw IllegalArgumentException("Não há alunos cadastrados com o código dado!")
+                        var aluno = dhm.listaAlunos[codAluno] ?: throw IllegalArgumentException("Não há alunos cadastrados com o código dado!")
                         nomeAluno = aluno.nome
 
                         print(" - Código do Curso: ")
@@ -232,8 +236,8 @@ fun main(){
                         var curso = dhm.listaCursos[codCurso] ?: throw IllegalArgumentException("Não há cursos cadastrados com o código dado!")
                         nomeCurso = curso.nome
 
-                        println(" - $nomeAluno matriculado no curso de $nomeAluno com o RM -  ${dhm.matricularAluno(codAluno, codCurso)}.")
-                        println(" - Há ${dhm.listaCursos[codCurso]!!.quantMaxAlunos - dhm.listaCursos.size} vagas restantes no curso.")
+                        println(" - $nomeAluno matriculado no curso de $nomeCurso com o RM -  ${dhm.matricularAluno(codAluno, codCurso)}.")
+                        println(" - Há ${dhm.listaCursos[codCurso]!!.quantMaxAlunos - dhm.listaCursos[codCurso]!!.alunosMatriculados.size} vagas restantes no curso.")
                         espaco(2)
 
                         println("Deseja matricular mais um aluno?")
@@ -288,6 +292,87 @@ fun main(){
 
                     espaco(1)
                     println(" -> $quantCadastros alocações de professores realizadas!")
+                    pressEnter()
+                }
+                8 ->{
+                    println()
+                    println(" [ ---- HISTÓRICO DE PROFESSORES ----]")
+
+                    print(" - Código do Curso: ")
+                    do ent = readLine() while (ent == null)
+                    var codCurso = ent.toInt()
+
+                    dhm.exibirHistoricoProf(codCurso)
+
+                    espaco(1)
+                    pressEnter()
+                }
+                9 ->{
+                    var quantExclusoes = 0
+                    var codCurso: Int?
+                    var codAluno: Int?
+
+                    cont = 1
+                    while (cont == 1) {
+                        println()
+                        println(" [ ---- REMOÇÃO DE ALUNO DE CURSO ----]")
+
+                        quantExclusoes++
+                        print(" - Código do Aluno: ")
+                        do ent = readLine() while (ent == null)
+                        codAluno = ent.toInt()
+                        var aluno = dhm.listaAlunos[codAluno] ?: throw IllegalArgumentException("Não há alunos cadastrados com o código dado!")
+
+                        print(" - Código do Curso: ")
+                        do ent = readLine() while (ent == null)
+                        codCurso = ent.toInt()
+                        var curso = dhm.listaCursos[codCurso] ?: throw IllegalArgumentException("Não há cursos cadastrados com o código dado!")
+
+                        curso.excluirAluno(aluno)
+
+                        println(" - Aluno [${aluno.codAluno}] - ${aluno.nome} ${aluno.sobrenome} excluído do curso [${curso.codCurso}] - ${curso.nome}.")
+                        espaco(2)
+
+                        println("Deseja excluir mais um aluno de um curso?")
+                        println(" [0] - Não; [1] - Sim")
+                        print(" >>> ")
+                        do ent = readLine() while (ent == null)
+                        cont = if (ent.isNotEmpty()) ent.toInt() else 0
+                    }
+
+                    espaco(1)
+                    println(" -> $quantExclusoes remoções de alunos de cursos realizadas!")
+                    pressEnter()
+                }
+                10 ->{
+                    var quantExclusoes = 0
+                    var codCurso: Int?
+                    var codAluno: Int?
+
+                    cont = 1
+                    while (cont == 1) {
+                        println()
+                        println(" [ ---- LISTA DE ALUNOS ----]")
+
+                        quantExclusoes++
+
+                        print(" - Código do Curso: ")
+                        do ent = readLine() while (ent == null)
+                        codCurso = ent.toInt()
+                        var curso = dhm.listaCursos[codCurso] ?: throw IllegalArgumentException("Não há cursos cadastrados com o código dado!")
+
+                        curso.exibirListaAlunos()
+                        espaco(2)
+
+                        println("Deseja visualizar mais uma lista de alunos de um curso?")
+                        println(" [0] - Não; [1] - Sim")
+                        print(" >>> ")
+                        do ent = readLine() while (ent == null)
+                        cont = if (ent.isNotEmpty()) ent.toInt() else 0
+                    }
+
+                    espaco(1)
+                    println(" -> $quantExclusoes listas de alunos visualizadas!")
                     pressEnter()
                 }
                 else -> {

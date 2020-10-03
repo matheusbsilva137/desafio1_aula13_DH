@@ -35,12 +35,6 @@ class Curso (var nome: String,
         profAdj = novoProfAdj
     }
 
-    fun adicionarAlunos(vararg alunos: Aluno){
-        alunos.forEach {
-            adicionarUmAluno(it)
-        }
-    }
-
     fun adicionarUmAluno(umAluno: Aluno) : Boolean{
         if (!alunosMatriculados.containsKey(umAluno.codAluno) && quantMaxAlunos >= alunosMatriculados.size + 1) {
             alunosMatriculados[umAluno.codAluno] = umAluno

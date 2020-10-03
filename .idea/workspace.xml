@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfb97ec-b4df-447a-965d-7a6e3ad855bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/diagramaClasses_vJ.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Principal.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diagramaClasses_vH.drawio" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/digital/com/desafio/Aluno.kt" afterDir="false" />
@@ -50,6 +52,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PrincipalKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="desafio1_aula13" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.digital.com.desafio.PrincipalKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.PrincipalKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

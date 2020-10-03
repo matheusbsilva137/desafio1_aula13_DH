@@ -1,6 +1,6 @@
 package br.digital.com.desafio
 
-class Aluno (var nome: String, var sobreneome: String){
+class Aluno (var nome: String, var sobrenome: String){
 
     var codAluno: Int
 

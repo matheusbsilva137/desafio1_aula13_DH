@@ -1,6 +1,16 @@
 package br.digital.com.desafio
 
-class Aluno (val codAluno: Int, var nome: String, var sobreneome: String){
+class Aluno (var nome: String, var sobrenome: String){
+
+    var codAluno: Int
+
+    companion object{
+        var codigo = 1000
+    }
+
+    init{
+        codAluno = codigo++
+    }
 
     override fun equals(other: Any?): Boolean {
         return if (other !is Aluno) false
